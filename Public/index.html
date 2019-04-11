@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- shortUrlApp is the instantiation -->
+<html ng-app="shortUrlApp">
+    <head></head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- include the javascript -->
+    <script src="js/app.js"></script> 
+
+    <body class="text-center">
+        <header>
+            <h3>URL Shortener Microservice</h3>
+            <h4><a href="https://www.freecodecamp.com" target="blank">freeCodeCamp: APIs and Microservices</a></h4>
+            <h5>Technologies: Node, Express, MongoDB, Mongoose, Javascript, CSS, and Bootstrap</h5>
+        </header>
+
+        <!-- add our controller for this part of the app -->
+        <section ng-controller='shortAppCtrl'>
+            <!-- ng model will save the value in the variable urlToShorten -->
+            <input ng-model="urlToShorten" placeholder="Enter URL">
+            
+            <!-- this button will bring you to the url, then the information is passed to the response/requests -->
+            <a class="btn btn-primary" ng-href='/new/{{ urlToShorten }}'>Get ShortURL</a>
+        </section>
+    </body>
+</html>
